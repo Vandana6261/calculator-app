@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+  height: 100vh;
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-thatguycraig000-1563356.jpg&fm=jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.calculator {
+  border: 1px solid gray;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-height: 80vh;
+  background-color: rgba(85, 85, 76, 0.637);
+  border-radius: 10px;
+  padding: 10px 20px;
+  /* position: relative; */
+}
+
+.inputBox {
+    position: relative;
+}
+input {
+  margin: auto;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(46, 46, 24);
+  color: white;
+  font-size: 18px;
+
+}
+input:focus {
+  outline: none;
+}
+#userInput {
+    position: relative;
+    z-index: 10;
+}
+#userOutput {
+    position: absolute;
+    left: 0%;
+    z-index: 9;
+}
+
+.btn {
+  margin: 10px 20px;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  width: 55px;
+  height: 55px;
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(46, 46, 24, 0.897);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 20px;
+  transition: all 0.4;
+}
+
+button:hover {
+  scale: 0.9;
+}
+
+.historyDiv {
+  position: absolute;
+  left: 80%;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  background-color: rgba(85, 85, 76, 0.637);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: none;
+}
+.historyDiv h2 {
+  /* color: blueviolet; */
+  font-size: 23px;
+  
+}
+.showHistory {
+    display: block;
+    /* background-color: red; */
+}
+p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
