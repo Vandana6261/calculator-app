@@ -102,7 +102,7 @@ button:hover {
   text-align: center;
   position: sticky;
   left: 90%;
-  top: -10%;
+  top:  0%;
   height: 20px;
   width: 20px;
 }
