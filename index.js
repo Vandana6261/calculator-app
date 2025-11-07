@@ -33,7 +33,15 @@ for (let i = 0; i < button.length; i++) {
       button[i].textContent != "History" &&
       button[i].textContent != "←"
     ) {
+      console.log("outputBox", outputBox.val)
+        // console.log(button[i])
       let inputText = e.target.textContent;
+      let prevInputText = "";
+      if(outputBox.value != "") {
+        prevInputText += outputBox.value;
+        inpBox.value += prevInputText
+        outputBox.value = ""
+      }
       inpBox.value += inputText;
     }
   });
@@ -51,7 +59,6 @@ equalBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   let val = inpBox.value;
   inpBox.value = "";
-  outputBox.value = "";
   let result;
   if (val) {
     result = eval(val);
@@ -63,6 +70,7 @@ equalBtn.addEventListener("click", (e) => {
     // inpBox.value = result;
     outputBox.style.zIndex = "11";
     outputBox.value = result;
+    console.log(outputBox.value)
     outputBox.classList.add("zAdded");
   }
   let str = `${val} = ${result}`;
@@ -97,12 +105,38 @@ historyBtn.addEventListener(
 backBtn.addEventListener("click", () => {
   let oldText = inpBox.value;
   let newText = "";
+  let oldAns = outputBox.value;
+  let newAns = "";
   for (let i = 0; i < oldText.length - 1; i++) {
     newText += oldText[i];
   }
   inpBox.value = newText;
+  for (let i = 0; i < oldAns.length - 1; i++) {
+    newAns += oldAns[i];
+  }
+  outputBox.value = newAns;
 });
 
+
+document.addEventListener("keydown", (event) => {
+    console.log("Key pressed : ", event.key)
+    console.log(typeof event.key)
+    if(event.key === "Enter") {
+        // console.log("enter is clicked")
+        equalBtn.click()
+      }
+      if(event.key === "Delete") clearBtn.click()
+      if(event.key === "Backspace") backBtn.click()
+
+    for(let i = 0; i < button.length; i++) {
+      // console.log("key is clicked")
+      
+        if(button[i].textContent == event.key) {
+          // console.log(button[i])
+            button[i].click()
+        }
+    }
+})
 
 
 // console.log(eval("2+3"));
