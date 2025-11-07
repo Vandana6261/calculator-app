@@ -9,6 +9,7 @@ let clearBtn = document.querySelector("#clear");
 let historyBtn = document.querySelector("#history");
 let backBtn = document.querySelector("#back");
 let historyDiv = document.querySelector(".historyDiv");
+let closeBtn = document.getElementById("closeBtn")
 
 
 let historyArr = [];
@@ -85,12 +86,17 @@ equalBtn.addEventListener("click", (e) => {
   localStorage.setItem("hisArr", JSON.stringify(historyArr));
 });
 
+closeBtn.addEventListener("click", () => {
+  historyBtn.click()
+})
+
 historyBtn.addEventListener(
   "click",
   () => {
     historyDiv.classList.toggle("showHistory");
     if (historyDiv.classList.contains("showHistory")) {
       historyDiv.replaceChildren();
+      historyDiv.appendChild(closeBtn)
       historyArr.forEach((eachVal, i) => {
         let para = document.createElement("p");
         let text = `${i + 1}.   ${eachVal}`;
@@ -122,7 +128,7 @@ document.addEventListener("keydown", (event) => {
     console.log("Key pressed : ", event.key)
     console.log(typeof event.key)
     if(event.key === "Enter") {
-        // console.log("enter is clicked")
+        console.log("enter is clicked")
         equalBtn.click()
       }
       if(event.key === "Delete") clearBtn.click()

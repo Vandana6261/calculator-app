@@ -5,7 +5,7 @@
 }
 
 .container {
-    position: relative;
+  position: relative;
   height: 100vh;
   /* background-color: red; */
   width: 100%;
@@ -80,26 +80,37 @@ button:hover {
 
 .historyDiv {
   position: absolute;
-  left: 70%;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 30px;
-  padding: 10px 20px;
+  height: 50px;
+  top: 0%;
+  margin: 10px 20px;
+  width: 90%;
+  overflow-y: auto;
   border-radius: 10px;
-  border: 1px solid gray;
-  background-color: rgba(85, 85, 76, 0.637);
+  border: none;
+  background-color: rgb(46, 46, 24);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   color: white;
-  display: none;
+  display: none;  
+  z-index: 99;
 }
-.historyDiv h2 {
-  /* color: blueviolet; */
-  font-size: 23px;
+.historyDiv p {
+  margin: 0px 20px;
+  font-size: 18px;
   
+}
+#closeBtn {
+  background-color: red;
+  border-radius: 10px;
+  text-align: center;
+  position: sticky;
+  left: 90%;
+  /* right: 2%; */
+  top: -10%;
+  height: 20px;
+  width: 20px;
 }
 .showHistory {
     display: block;
-    /* background-color: red; */
 }
 p {
   margin-bottom: 10px;

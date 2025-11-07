@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="shortcut icon" href="calculatorLogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="calculatorLogo.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="calculator">
-
         <div class="inputBox">
-          <input type="text" id="userInput" placeholder="input" readonly/>
-          <input type="text" id="userOutput" placeholder="output" readonly>
+          <input type="text" id="userInput" placeholder="input" readonly />
+          <input type="text" id="userOutput" placeholder="output" readonly />
+          <div class="historyDiv">
+            <div id="closeBtn">X</div>
+          </div>
         </div>
 
         <div class="btn">
@@ -48,9 +50,10 @@
         </div>
       </div>
 
-      <div class="historyDiv">
+      <!-- <div class="historyDiv"> -->
         <!-- <h2>History: </h2> -->
-      </div>
+      <!-- </div> -->
+    
     </div>
 
     <script src="index.js"></script>
