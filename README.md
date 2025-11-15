@@ -1,1 +1,1 @@
-## I make this calculato app usign vanilla javascript.
+## I make this calculator app using vanilla javascript.
