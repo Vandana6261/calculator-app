@@ -76,7 +76,7 @@ equalBtn.addEventListener("click", (e) => {
   }
   let str = `${val} = ${result}`;
 
-  if (historyArr.length < 11) {
+  if (historyArr.length < 10) {
     historyArr = [...historyArr, str];
   } else {
     historyArr.shift();
